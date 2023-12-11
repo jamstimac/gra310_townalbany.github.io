@@ -1,0 +1,382 @@
+:root {
+    /* primary colors */
+    --fire_starter: #be1e2d;
+    --cool_down: #8a8c8f;
+
+
+    /* secondary palette */
+    --sleek: #41393d;
+    --spicy: #ef4e22;
+
+    --lucky: #d4a18d;
+    --bamboo: #d7e4c2;
+  
+    /* low alpha colors */
+    --cool_down_10: rgba(138,140,143,.1);
+
+    --sleek_75: rgba(65,57,61,.75);
+}
+
+
+/* Majesti Banner fonts */
+/* Medium (will load if other fonts take too long to load) */
+@font-face{
+    font-family: 'MajestiBanner';
+        src: url('fonts/majesti-banner-medium.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+/* Medium italic*/
+@font-face{
+    font-family: 'MajestiBanner';
+        src: url('fonts/majesti-banner-medium-italic.otf');
+    font-weight: 400;
+    font-style: italic;
+}
+/* Bold */
+@font-face{
+    font-family: 'MajestiBanner';
+        src: url('fonts/majesti-banner-bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+/* Bold Italic */
+@font-face{
+    font-family: 'MajestiBanner';
+        src: url('fonts/majesti-banner-bold-italic.otf');
+    font-weight: 700;
+    font-style: italic;
+}
+/* Heavy */
+@font-face{
+    font-family: 'MajestiBanner';
+        src: url('fonts/majesti-banner-heavy.otf');
+    font-weight: 800;
+    font-style: normal;
+}
+/* Heavy Italic */
+@font-face{
+    font-family: 'MajestiBanner';
+        src: url('fonts/majesti-banner-heavy-italic.otf');
+    font-weight: 800;
+    font-style: italic;
+}
+/* Light */
+@font-face{
+    font-family: 'MajestiBanner';
+        src: url('fonts/majesti-banner-light.otf');
+    font-weight: 200;
+    font-style: normal;
+}
+/* Light Italic */
+@font-face{
+    font-family: 'MajestiBanner';
+        src: url('fonts/majesti-banner-light-italic.otf');
+    font-weight: 200;
+    font-style: italic;
+}
+/* Book */
+@font-face{
+    font-family: 'MajestiBanner';
+        src: url('fonts/majesti-banner-book.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+/* Book Italic*/
+@font-face{
+    font-family: 'MajestiBanner';
+        src: url('fonts/majesti-banner-book-italic.otf');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* style ids */
+
+/* when on the linked page, this will change the color of link to greyed out */
+#ON_PAGE {
+    color: var(--cool_down);
+}
+
+/* image ids */
+/* specific id for formatting the logo img */
+#LOGO {
+    padding: 0px;
+    margin: 0px;
+
+    /* height not required since width formats all content 
+        with respect to height as well */
+    width: 200px;
+}
+
+/* formatting to crop menu images */
+#MENU {
+    height: 100px;
+    width: 500px;
+
+    object-fit: cover;
+}
+
+/* formatting to crop and resize about image */
+#ABOUT {
+    width: 600px;
+    height: 200px; 
+
+    object-fit: cover;
+}
+
+/* created to be used with the <hr> tag */
+#LESS {
+    background: var(--cool_down);
+    height: .5px;
+    width: 75%;
+}
+
+/* right styling text for paragraph */
+
+#ALIGN_RIGHT_RED {
+    text-align: right;
+    color: var(--fire_starter);
+    
+    margin: 0px;
+    padding: 0px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+#ALIGN_RIGHT_RED:hover {
+    color: var(--bamboo);
+}
+
+#ALIGN_RIGHT_GREY {
+    text-align: right;
+    color: var(--cool_down);
+    
+    margin: 0px;
+    padding: 0px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+/* two columns id for header so that important info is shown alongside the logo */
+#COLUMN2 {
+    columns: 2;
+    width: 100%;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+#COLUMN2_CENTER {
+    columns: 2;
+    width: 100%;
+
+    page-break-inside: avoid;
+    break-inside: avoid;
+
+    text-align: center;
+}
+/* align images to the right while keeping other content formating the same */
+#CONTENT_ALIGN_RIGHT {
+    display: block;
+    margin-left: 30px;
+    padding: 0px;
+}
+
+/* footer text color, also corrects buffer padding for p element */
+#FOOTER {
+    color: var(--cool_down);
+
+    padding: 0px;
+    margin: 0px;
+}
+
+/* menu text colors */
+#BAMBOO {
+    color: var(--bamboo);
+}
+#LUCKY {
+    color: var(--lucky);
+}
+
+/* classes */
+/* page header */
+.header {
+    background-size: contain;
+    background-color: var(--sleek_75);
+
+    color: var(--fire_starter);
+
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin: 0px;
+}
+
+.nav {
+    background-size: contain;
+    background-color: var(--sleek_75);
+
+    color: var(--fire_starter);
+
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+.footer {
+    background-size: contain;
+    background-color: var(--sleek_75);
+
+    color: var(--cool_down);
+
+    font-size: 14px;
+}
+
+/* html element styles*/
+
+html, body {
+    /* weird percentage required to keep browser scroll bar on page */
+
+    height: 100vh;
+    width: 100vw;
+    
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'MajestiBanner';
+    background-color: var(--cool_down);
+
+    /* required to make header and other elements in line with page (otherwise there is space around all elements)
+        and it's kind of ugly. */
+
+    padding: 0px;
+    padding-right: 10px;
+    margin: 0;
+}
+
+/* header styles */
+header {
+    padding: 20px;
+    padding-left: 10px;
+    margin: 0px;
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+/* section styles */
+section {
+    font-family: athelas;
+    margin: 20px;
+    margin-right: 100px;
+    width: 100%;
+
+    position: relative;
+    min-height: 100%;
+    margin-bottom: -40px;
+}
+
+/* footer styles */
+footer {
+    height: 40px;
+    width: 100%;
+
+    padding: 20px;
+    padding-left: 10px;
+
+    position: relative;
+    bottom: 0;
+    top: 100vh;
+}
+
+/* paragraph styles */
+p {
+    font-weight: 200;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--sleek);
+
+    padding-right: 100px;
+}
+
+/* header 1 styles */
+h1 {
+    font-weight: 800;
+    font-style: normal;
+    font-size: 36px;
+    color: var(--fire_starter);
+
+    padding: 0px;
+}
+
+/* header 2 styles*/
+h2 {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 24px;
+    color:var(--fire_starter);
+
+    padding: 0px;
+}
+
+/* header 3 styles */
+h3 {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    color: var(--spicy);
+
+    padding: 0px;
+}
+
+/* unordered list/li styles */
+
+/* navigation */
+ul {
+    font-weight: 700;
+    font-style: normal;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    display: inline;
+    padding-right: 1%;
+    
+}
+
+li a {
+    color: var(--fire_starter);
+    padding: 12px;
+    background-color: var(--cool_down_10);
+    text-decoration: none;
+}
+
+li a:hover {
+    color: var(--bamboo);
+
+    background-color: var(--cool_down_10);
+}
+
+/* image styles */
+
+/* logo */
+img {
+    width: 350px;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* line element styles */
+hr {
+    background: var(--sleek_75);
+    height: 4px;
+    border: 0;
+}
+
